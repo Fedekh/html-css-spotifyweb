@@ -52,10 +52,17 @@ ul {
     padding: 20px 0;
 }
 
+.flex-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: .8rem;
+}
+
 .flex-bot {
     display: flex;
-    justify-content: space-between;
-    
+    justify-content: space-between;    
 }
 
 
@@ -177,14 +184,19 @@ main {
     padding: 10px 20px;
 }
 
-#main nav {
+#main ul {
     margin: 100px auto;
     text-align: center;
     color: white;
     /* debug */
-    border: 1px solid black;
+    /* border: 1px solid black; */
 } 
 
+#main hr {
+    width: 60%;
+    margin: 0 auto;
+    border: 1px solid yellowgreen;
+}
 #main .head-title {
     border: 1px solid green;
     display: inline-block;
