@@ -48,6 +48,7 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    gap: 30px;
 }
 
 
@@ -90,7 +91,14 @@ main {
     border: 1px solid green;
 }
 
+#side-bar > * {
+    border: 1px solid red;
+}
 
+#install {
+    justify-self: flex-end;
+    align-self: flex-end;
+}
 
 #main {
     width: calc(100% - 150px);
