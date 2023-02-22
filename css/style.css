@@ -41,7 +41,8 @@ ul {
 
 .flex-wrap {
     display: flex;
-    flex-wrap: wrap;       
+    flex-wrap: wrap;
+    gap: 10px;       
 }
 
 .flex-v {
@@ -157,9 +158,11 @@ main {
 #main {
     width: calc(100% - 200px);
     height: 100%;
-    border: 1px solid red;
     overflow-y: auto;
     position: relative;
+    padding: 10px 20px;
+    /* debug */
+    /* border: 1px solid red; */
 
 }
 
@@ -197,18 +200,28 @@ main {
     margin: 0 auto;
     border: 1px solid yellowgreen;
 }
-#main .head-title {
+#main .head-title:not(:nth-child(2)), #main p {
+    /* display: inline-block; */
+    /* margin: 0 20px; */
+    /* debug  */
     border: 1px solid green;
-    display: inline-block;
-    margin: 40px 0;
     
 }
 
-.card {
-    border: 1px solid red;
-    width: calc(100% / 6 - 10px);
-    margin-left: 10px;
+.row1, .row2, .row3 {
+    margin: 20px 0;
 }
+
+.card {
+    width: calc(100% / 6 - 10px);
+    /* debug */
+    border: 1px solid red;
+}
+
+.row1 .card h3, .row1 .card h5 {
+    text-align: center;
+    margin: 10px 0;
+} 
 
 
 /* ################################################################# */
