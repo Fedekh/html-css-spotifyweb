@@ -8,6 +8,7 @@
 
 body{
     font-family: 'Montserrat', sans-serif;
+    font-size: .8rem;
     color: white;
 }
 
@@ -34,12 +35,19 @@ ul {
     list-style-type: none;
 }
 
+.flex-main {
+    display: flex;
+}
+
 .flex {
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: space-between;
+    flex-wrap: wrap;       
+}
 
+.flex-v {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 
@@ -82,6 +90,8 @@ main {
     border: 1px solid green;
 }
 
+
+
 #main {
     width: calc(100% - 150px);
     height: 100%;
@@ -110,10 +120,13 @@ main {
 #main .head-title {
     border: 1px solid green;
     display: inline-block;
+    margin: 10px 0 10px 10px;
+    
 }
 
 .card {
     border: 1px solid red;
-    width: calc(100% / 6 );
+    width: calc(100% / 6 - 10px);
+    margin-left: 10px;
 }
 
