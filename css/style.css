@@ -103,6 +103,8 @@ main {
 #main header {
     text-align: end;
     height: 30px;
+    width: calc(100% - 150px);
+    position: fixed;
     z-index: 999;
     top: 0;
     right: 0;
