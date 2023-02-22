@@ -39,7 +39,7 @@ ul {
     display: flex;
 }
 
-.flex {
+.flex-wrap {
     display: flex;
     flex-wrap: wrap;       
 }
@@ -50,6 +50,12 @@ ul {
     justify-content: space-between;
     gap: 30px;
     padding: 20px 0;
+}
+
+.flex-bot {
+    display: flex;
+    justify-content: space-between;
+    gap: 150px;
 }
 
 
@@ -69,7 +75,10 @@ ul {
     /* background-color: rgb(75, 75, 12); */
 }
 
+/* -------------------------------------------------------------- */
+
 /* BOT NAV COMANDS */
+
 #nav-bot {
     width: 100%;
     height: 80px;
@@ -78,17 +87,16 @@ ul {
     border: 1px solid green;
 }
 
-
-/* MAIN SECTION WITH ALBUM */
-
-main {
-    width: 100%;
-    height: calc(100% - 80px);
-    background-color: var(--main);
-    /* debug */
-    border: 1px solid peru;
+#nav-bot > * {
+    border: 1px solid red;
+    margin: 10px 40px;
 }
 
+#nav-bot :not(:nth-child(2)) {
+    width: 25%;
+}
+
+/* ------------------------------------------------------------------- */
 
 /* LEFT LATERAL BAR */
 
@@ -108,6 +116,21 @@ main {
     justify-self: flex-end;
     
 }
+
+/* --------------------------------------------------------------------*/
+
+
+/* MAIN SECTION WITH ALBUM */
+
+main {
+    width: 100%;
+    height: calc(100% - 80px);
+    background-color: var(--main);
+    /* debug */
+    border: 1px solid peru;
+}
+
+
 
 #main {
     width: calc(100% - 150px);
@@ -130,6 +153,7 @@ main {
 }
 
 #main nav {
+    margin: 80px auto;
     text-align: center;
     color: white;
     /* debug */
@@ -139,7 +163,7 @@ main {
 #main .head-title {
     border: 1px solid green;
     display: inline-block;
-    margin: 10px 0 10px 10px;
+    margin: 40px 0;
     
 }
 
