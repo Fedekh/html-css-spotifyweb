@@ -30,10 +30,62 @@ ul {
     list-style-type: none;
 }
 
+.flex {
+    display: flex;
+}
+
 #wrapper {
     width: 100%;
     height: 100vh;
     /* debug */
-    background-color: lightslategray;
+    /* background-color: rgb(75, 75, 12); */
 }
+
+#nav-bot {
+    width: 100%;
+    height: 80px;
+    background-color: var(--navbot);
+    /* debug */
+    border: 1px solid green;
+}
+
+main {
+    width: 100%;
+    height: calc(100% - 80px);
+    overflow-y: auto;
+    background-color: var(--main);
+    /* debug */
+    border: 1px solid peru;
+}
+
+#side-bar {
+    width: 150px;
+    height: 100%;
+    background-color: var(--sidebar);
+    /* debug */
+    border: 1px solid green;
+}
+
+#main {
+    width: calc(100% - 150px);
+    height: 100%;
+    border: 1px solid red;
+}
+
+#main header {
+    text-align: end;
+    height: 30px;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    /* debug */
+    border: 1px solid yellow;
+}
+
+#main nav {
+    text-align: center;
+    color: white;
+    /* debug */
+    border: 1px solid black;
+} 
 
