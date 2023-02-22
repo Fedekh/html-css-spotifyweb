@@ -48,14 +48,14 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 30px;
+    gap: 20px;
     padding: 20px 0;
 }
 
 .flex-bot {
     display: flex;
     justify-content: space-between;
-    gap: 150px;
+    
 }
 
 
@@ -69,6 +69,7 @@ ul {
     /* max-width: 1200px; */
     width: 100%;
     height: 100vh;
+    position: fixed;
     /* debug */
     background-color: rgb(75, 75, 12);
 }
@@ -79,7 +80,7 @@ ul {
 
 #nav-bot {
     width: 100%;
-    height: 80px;
+    height: 100px;
     background-color: var(--navbot);
     /* debug */
     border: 1px solid green;
@@ -90,30 +91,46 @@ ul {
     margin: 10px 40px;
 }
 
-#nav-bot :not(:nth-child(2)) {
-    /* max-width: 25%; */
-}
 
 /* ------------------------------------------------------------------- */
 
 /* LEFT LATERAL BAR */
 
 #side-bar {
-    width: 150px;
+    width: 200px;
     height: 100%;
     background-color: var(--sidebar);
     /* debug */
-    border: 1px solid green;
+    /* border: 1px solid green; */
 }
 
 #side-bar > * {
-    border: 1px solid red;
+    margin: 0 10px;
+    /* debug */
+    /* border: 1px solid red; */
 }
 
 #install {
-    justify-self: flex-end;
-    
+    justify-self: flex-end;    
 }
+
+#menu > *, #logo, #playlist  * {
+    margin: 10px 0;
+}
+
+#playlist i {
+    background-color: white;
+    color: black;
+    font-size: 1.5em;
+    vertical-align: middle;    
+}
+
+#side-bar hr {
+    margin: 10px auto;
+    width: 100%;
+}
+
+
 
 /* --------------------------------------------------------------------*/
 
@@ -122,7 +139,7 @@ ul {
 
 main {
     width: 100%;
-    height: calc(100% - 80px);
+    height: calc(100% - 100px);
     background-color: var(--main);
     /* debug */
     border: 1px solid peru;
@@ -131,7 +148,7 @@ main {
 
 
 #main {
-    width: calc(100% - 150px);
+    width: calc(100% - 200px);
     height: 100%;
     border: 1px solid red;
     overflow-y: auto;
@@ -141,18 +158,27 @@ main {
 
 #main header {
     text-align: end;
-    height: 30px;
-    width: 100%;
-    position: absolute;
+    height: 90px;
+    line-height: 90px;
+    width: calc(100% - 200px);
+    position: fixed;
     z-index: 999;
     top: 0;
-    right: 0;
+    opacity: .5;    
+    background-color: var(--header);
+    padding-right: 50px ;
     /* debug */
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
+}
+
+#main header > a {
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 10px 20px;
 }
 
 #main nav {
-    margin: 80px auto;
+    margin: 100px auto;
     text-align: center;
     color: white;
     /* debug */
