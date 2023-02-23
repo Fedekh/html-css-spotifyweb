@@ -244,7 +244,7 @@ ul {
     justify-self: flex-end;    
 }
 
-#reserve, #reserve2 {
+#download2, #user2 {
     display: none;
 }
 
@@ -262,6 +262,13 @@ ul {
 #side-bar hr {
     margin: 10px auto;
     width: 100%;
+}
+
+
+#user img, #user2 img {
+    background-color: var(--navbot);
+    border-radius: 50%;
+    
 }
 
 
@@ -439,7 +446,7 @@ main {
         display: none;
     }
 
-    #install #reserve, #install #reserve2 {
+    #install #download2, #install #user2 {
         width: 30px;
         display: block;
     }
