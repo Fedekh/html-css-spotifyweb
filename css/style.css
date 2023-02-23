@@ -197,10 +197,29 @@ ul {
     /* border: 1px solid red; */
 }
 
+#menu li > img {
+    width: 15%; 
+    vertical-align: middle;
+}
 
+
+
+#install > a {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+#install div{
+    width: 20%;    
+}
 
 #install {
     justify-self: flex-end;    
+}
+
+#reserve, #reserve2 {
+    display: none;
 }
 
 #menu > *, #logo, #playlist  * {
@@ -359,12 +378,29 @@ main {
         align-items: center;
     }   
 
+    #logo-normal {
+        display: none;
+    }
+
     #logo-small {
         display: block;
+        width: 30%;
     }
     
-    #logo-normal, #playlist, #side-bar span {
+    #playlist {
         display: none;
+    }
+    #menu li > span {
+        display: none;
+    }
+
+    #install a {
+        display: none;
+    }
+
+    #install #reserve, #install #reserve2 {
+        width: 30px;
+        display: block;
     }
 
     
