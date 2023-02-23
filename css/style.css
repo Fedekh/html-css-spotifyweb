@@ -129,6 +129,7 @@ ul {
 
 #currently i {
     margin: 0 10px;
+    
 }
 
 .card-bot #sinister {
@@ -377,6 +378,12 @@ main {
         display: flex;
         flex-wrap: wrap;
         gap: 10px;
+    }
+
+
+    #currently #iconn {
+        display: flex;
+        flex-direction: column;
     }
 }
 
