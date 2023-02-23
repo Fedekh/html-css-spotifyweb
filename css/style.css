@@ -104,17 +104,35 @@ ul {
 }
 
 #nav-bot > * {
-    border: 1px solid red;
     margin: 10px 20px;
+    /* debug */
+    /* border: 1px solid red; */
 }
 
+#currently *, #play *, #comand *{
+    cursor: pointer;
+}
+
+
+#nav-bot #currently {
+    width: 300px;
+}
+#nav-bot #comand {
+    width: 180px;
+}
+
+#nav-bot #play{
+    width: 40%;
+    padding: 10px 0;
+    align-items: center;
+}
 
 #currently i {
     margin: 0 10px;
 }
 
 .card-bot #sinister {
-    max-width: 15%;
+    max-width: 30%;
 }
 
 #comand #volume {
@@ -124,11 +142,21 @@ ul {
     display: inline-block;
 }
 
+#currently .description {
+    font-size: .8rem;
+}
+
+#progress {
+    max-width: 100%;
+}
+
 #comand-play {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 30px;
+    max-width: 100%;
+    
 }
 
 #progress-bar {
@@ -159,10 +187,12 @@ ul {
 }
 
 #side-bar > * {
-    margin: 0 10px;
+    padding: 0 10px;
     /* debug */
     /* border: 1px solid red; */
 }
+
+
 
 #install {
     justify-self: flex-end;    
@@ -254,6 +284,7 @@ main {
 }
 
 .card {
+    cursor: pointer;  /*for to appear hand in card*/
     width: calc(100% / 6 - 10px);
     /* debug */
     /* border: 1px solid red; */
@@ -273,6 +304,9 @@ main {
                         /* <= 1100px VIEW  */
 /* #################################################################### */
 @media  screen and (max-width:1100px) {
+    .card {
+        width: calc(100% / 4 - 10px);
+    }
     
 }
 
@@ -289,7 +323,18 @@ main {
                         /* <=700px VIEW  */
 /* #################################################################### */
 @media  screen and (max-width:700px) {
+    .card {
+        width: calc(100% / 2 - 10px);
+    }
     
+    .main li{
+        width: calc(100% / 3 - 10px);
+    }
+    .main .flex-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
 }
 
 
