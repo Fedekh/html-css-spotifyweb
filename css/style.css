@@ -241,10 +241,14 @@ main {
     height: 100%;
     overflow-y: auto;
     position: relative;
-    padding: 10px 20px;
+    /* padding: 10px 20px; */
     /* debug */
     /* border: 1px solid red; */
 
+}
+
+#main > *:not(header) {
+    padding: 10px 20px;
 }
 
 #main header {
@@ -318,12 +322,6 @@ main {
 
 
 
-
-
-
-
-
-
 /* ################################################################# */
                         /* <=700px VIEW  */
 /* #################################################################### */
@@ -336,7 +334,7 @@ main {
         width: calc(100% / 3 - 10px);
     }
 
-    .main .flex-nav {
+    #main .flex-nav {
         display: flex;
         flex-wrap: wrap;
         gap: 10px;
@@ -347,11 +345,14 @@ main {
 
 
 
-
 /* ################################################################# */
                         /* <=600px VIEW  */
 /* #################################################################### */
 @media  screen and (max-width:600px) {
+
+    #main, #main header {
+        width: calc(100% - 50px);
+    }
     
     #side-bar {
         width: 50px;
