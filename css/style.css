@@ -133,6 +133,7 @@ ul {
 
 .card-bot #sinister {
     max-width: 30%;
+    min-width: 30%;
 }
 
 #comand #volume {
@@ -184,6 +185,10 @@ ul {
     background-color: var(--sidebar);
     /* debug */
     /* border: 1px solid green; */
+}
+
+#logo-small{
+    display: none;
 }
 
 #side-bar > * {
@@ -330,6 +335,7 @@ main {
     .main li{
         width: calc(100% / 3 - 10px);
     }
+
     .main .flex-nav {
         display: flex;
         flex-wrap: wrap;
@@ -346,6 +352,22 @@ main {
                         /* <=600px VIEW  */
 /* #################################################################### */
 @media  screen and (max-width:600px) {
+    
+    #side-bar {
+        width: 50px;
+        align-items: center;
+    }   
+
+    #logo-small {
+        display: block;
+    }
+    
+    #logo-normal, #playlist, #side-bar span {
+        display: none;
+    }
+
+    
+
     
 }
 
