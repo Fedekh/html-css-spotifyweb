@@ -219,8 +219,13 @@ ul {
 
 #side-bar > * {
     padding: 0 10px;
+    color: gray;
     /* debug */
     /* border: 1px solid red; */
+}
+
+#side-bar a {
+    color: grey;
 }
 
 #menu li > img {
@@ -262,6 +267,7 @@ ul {
 #side-bar hr {
     margin: 10px auto;
     width: 100%;
+    color: gray;
 }
 
 
@@ -269,6 +275,19 @@ ul {
     background-color: var(--navbot);
     border-radius: 50%;
     
+}
+
+/* BONUS SIDE BAR */
+
+
+#menu li:hover, .playlist a:hover {
+    border-left: 2px solid green;
+    cursor: pointer;
+}
+
+.playlist a:hover {
+    color: white;
+    filter: brightness(1);
 }
 
 
@@ -283,7 +302,7 @@ main {
     height: calc(100% - 100px);
     background-color: var(--main);
     /* debug */
-    border: 1px solid peru;
+    /* border: 1px solid peru; */
 }
 
 
@@ -309,9 +328,9 @@ main {
     line-height: 90px;
     width: calc(100% - 200px);
     position: fixed;
-    z-index: 999;
+    z-index: 998;
     top: 0;
-    opacity: .5;    
+    opacity: .3;    
     background-color: var(--header);
     padding-right: 50px ;
     /* debug */
@@ -322,12 +341,34 @@ main {
     border: 1px solid white;
     border-radius: 20px;
     padding: 10px 20px;
+    opacity: 1;
+    color: rgb(75, 75, 75);
 }
+
+/* BONUS HEADER */
+
+header > a:hover {
+    font-size: 1.3rem;
+    filter: brightness(1);
+    color: white;
+        
+}
+
+#main li, #main .subtitle {
+    color: gray;
+}
+
+/* BONUS NAV LIST  */
+
+#head-nav li:hover{
+    color: white;
+}
+
 
 #main ul {
     margin: 100px auto;
     text-align: center;
-    color: white;
+    
     /* debug */
     /* border: 1px solid black; */
 } 
@@ -347,6 +388,7 @@ main {
 .card {
     cursor: pointer;  /*for to appear hand in card*/
     width: calc(100% / 6 - 10px);
+    position: relative;
     /* debug */
     /* border: 1px solid red; */
 }
@@ -359,6 +401,30 @@ main {
 .row3 img {
     border-radius: 50%;
 }
+
+
+
+.play {
+    display: none;      
+    font-size: 5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-43%, -93%);  
+    
+}
+
+/* BONUS CARD */
+
+.card:hover .play {
+    display: block;       
+}
+
+
+.card:hover img{
+    opacity: .5;
+}
+
 
 
 /* ################################################################# */
