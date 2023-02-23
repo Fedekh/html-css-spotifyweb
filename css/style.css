@@ -63,8 +63,17 @@ ul {
 
 .flex-bot {
     display: flex;
-    justify-content: space-between;    
+    justify-content: space-between;
+    align-items: center;
 }
+
+.flex-card-bot {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    
+}
+
 
 
 /* ################################################################# */
@@ -96,9 +105,46 @@ ul {
 
 #nav-bot > * {
     border: 1px solid red;
-    margin: 10px 40px;
+    margin: 10px 20px;
 }
 
+
+#currently i {
+    margin: 0 10px;
+}
+
+.card-bot #sinister {
+    max-width: 15%;
+}
+
+#comand #volume {
+    width: 60px;
+    height: 3px;
+    background-color: white;
+    display: inline-block;
+}
+
+#comand-play {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+#progress-bar {
+    width: 300px;
+    height: 4px;
+    background-color: white;
+    display: inline-block;
+}
+
+#comand > * {
+    margin: 0 4px;
+}
+
+#comand-play i:nth-child(3) {
+    font-size: 1.6rem;
+}
 
 /* ------------------------------------------------------------------- */
 
@@ -200,28 +246,27 @@ main {
     margin: 0 auto;
     border: 1px solid yellowgreen;
 }
-#main .head-title:not(:nth-child(2)), #main p {
-    /* display: inline-block; */
-    /* margin: 0 20px; */
-    /* debug  */
-    border: 1px solid green;
-    
-}
+
+
 
 .row1, .row2, .row3 {
-    margin: 20px 0;
+    margin: 30px 0;
 }
 
 .card {
     width: calc(100% / 6 - 10px);
     /* debug */
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
-.row1 .card h3, .row1 .card h5 {
+.card h4, .card h5 {
     text-align: center;
     margin: 10px 0;
 } 
+
+.row3 img {
+    border-radius: 50%;
+}
 
 
 /* ################################################################# */
