@@ -268,10 +268,13 @@ ul {
 
 /* LEFT LATERAL BAR */
 
+
+/* BONUS EXTRA, ADD A SIMPLY SCROLLBAR Y AUTO */
 #side-bar {
     width: 200px;
     height: 100%;
     background-color: var(--sidebar);
+    overflow-y: auto;
     /* debug */
     /* border: 1px solid green; */
 }
