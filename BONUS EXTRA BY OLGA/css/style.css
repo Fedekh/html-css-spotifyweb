@@ -194,7 +194,7 @@ ul {
     
 }
 
-#progress {
+#progress, #progress:nth-child(2) {
     max-width: 100%;
 }
 
@@ -208,7 +208,7 @@ ul {
     
 }
 #progress-bar {
-    width: 63px;
+    width: 20%;
     height: 4px;
     background-color: white;
     display: inline-block;
@@ -217,7 +217,7 @@ ul {
 }
 
 #under-bar {
-    width: 200px;
+    width: 80%;
     height: 4px;
     background-color: rgb(133, 100, 100);
     position: relative;
