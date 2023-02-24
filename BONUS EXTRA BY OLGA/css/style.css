@@ -122,11 +122,14 @@ ul {
 }
 
 
-#nav-bot #currently {
-    width: 300px;
+#currently {
+    width: 250px;
 }
-#nav-bot #comand {
-    width: 180px;
+
+#comand {
+    width: 250px;
+    position: relative;
+
 }
 
 #nav-bot #play{
@@ -197,6 +200,8 @@ ul {
 
 
 
+
+
 /* HO VOLUTO USARE STO TRUCCHETTO PER NON ESAURIRMI */
 .bar {
     display: flex;
@@ -207,6 +212,7 @@ ul {
     height: 4px;
     background-color: white;
     display: inline-block;
+    position: relative;
     
 }
 
@@ -215,30 +221,64 @@ ul {
     height: 4px;
     background-color: rgb(133, 100, 100);
     position: relative;
-    left: -16px;    
+    
+}
+
+/* EXTRA BONUS HOVER WITH AFTER PSEUDOELEMENT */
+
+#progress .bar:hover #progress-bar:after{
+    content: "";
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: green;
+    position: absolute;
+    right: -4px;
+    bottom: -5px;
+    z-index: 1;
+}
+
+#comand .bar:hover #volume::after{
+    content: "";
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: green;
+    position: absolute;
+    right: 68px;    
+    bottom: -1px;
+    z-index: 1;
+}
+
+#progress .bar:hover #under-bar{
+    width: 197px;
 }
 
 
 
-.bar .circle {
+
+/* .bar .circle {
     height: 12px;
     width: 12px;
     /* display: inline-block; */
-    border: 1px solid green;
+    /* border: 1px solid green;
     border-radius: 50%;
     background-color: green;
     position: relative;
     left: 0px;
     top: -3px;
     /* display: none; */
-    opacity: 0;
-}
+    /* opacity: 0; */
 
-.bar:hover .circle {
+/* .bar:hover .circle {
     opacity: 1;
     z-index: 1;
     left: -4px;
-}
+} */
+
+
 
 .bar:hover #progress-bar {
     background-color: green;
@@ -270,6 +310,7 @@ ul {
 
 
 /* BONUS EXTRA, ADD A SIMPLY SCROLLBAR Y AUTO */
+
 #side-bar {
     width: 200px;
     height: 100%;
