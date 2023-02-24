@@ -128,8 +128,14 @@ ul {
 }
 
 #currently i {
-    margin: 0 10px;
-    
+    margin: 0 10px;    
+}
+
+#comand-play ul{
+    display: flex;
+    gap: 40px;
+    margin-left: -25px;
+    align-items: center;
 }
 
 .card-bot #sinister {
@@ -137,17 +143,35 @@ ul {
     min-width: 30%;
 }
 
-#comand #volume {
+.description h5 {
+    color: gray;
+}
+
+/* BONUS NAV BOT HOVER */
+
+.description h5:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+#icon i:hover {
+    color: white;
+    scale: 1.2;
+}
+
+#volume {
     width: 30px;
     height: 3px;
     background-color: white;
     display: inline-block;
 }
 
-#comand #under-volume{
+#under-volume{
     width: 50px;
     height: 3px;
-    background-color: #466448;
+    background-color: #5f6572;
+    position: relative;
+    left: -13px;
 }
 
 #currently .description {
@@ -163,14 +187,6 @@ ul {
     max-width: 100%;
 }
 
-#comand-play {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    max-width: 100%;
-    
-}
 
 
 /* HO VOLUTO USARE STO TRUCCHETTO PER NON ESAURIRMI */
@@ -179,7 +195,7 @@ ul {
     
 }
 #progress-bar {
-    width: 60px;
+    width: 63px;
     height: 4px;
     background-color: white;
     display: inline-block;
@@ -189,17 +205,56 @@ ul {
 #under-bar {
     width: 200px;
     height: 4px;
-    background-color: rgb(133, 100, 100);    
+    background-color: rgb(133, 100, 100);
+    position: relative;
+    left: -16px;    
 }
+
+
+
+.bar .circle {
+    height: 12px;
+    width: 12px;
+    /* display: inline-block; */
+    border: 1px solid green;
+    border-radius: 50%;
+    background-color: green;
+    position: relative;
+    left: 0px;
+    top: -3px;
+    /* display: none; */
+    opacity: 0;
+}
+
+.bar:hover .circle {
+    opacity: 1;
+    z-index: 1;
+    left: -4px;
+}
+
+.bar:hover #progress-bar {
+    background-color: green;
+    width: 66px;
+}
+
+#comand .bar:hover #volume{
+    background-color: green;
+}
+
 
 
 #comand > * {
     margin: 0 4px;
 }
 
-#comand-play i:nth-child(3) {
+#comand-play .plays {
     font-size: 1.6rem;
 }
+
+#comand-play ul:hover .plays {
+    transform: scale(1.3);
+}
+
 
 /* ------------------------------------------------------------------- */
 
@@ -218,10 +273,14 @@ ul {
 }
 
 #side-bar > * {
-    padding: 0 10px;
+    /* padding: 0 10px; */
     color: gray;
     /* debug */
     /* border: 1px solid red; */
+}
+
+#side-bar li, #side-bar div {
+    padding-left: 5px;
 }
 
 #side-bar a {
@@ -280,14 +339,19 @@ ul {
 /* BONUS SIDE BAR */
 
 
-#menu li:hover, .playlist a:hover {
+#menu li:hover, .playlist li:hover{
     border-left: 2px solid green;
     cursor: pointer;
 }
 
-.playlist a:hover {
+#side-bar .playlist li:hover a{
     color: white;
     filter: brightness(1);
+    
+}
+
+#install span:hover {
+    color: white;
 }
 
 
@@ -331,7 +395,7 @@ main {
     z-index: 998;
     top: 0;
     opacity: .3;    
-    background-color: var(--header);
+    background-color: rgba(0,0,0, .5);
     padding-right: 50px ;
     /* debug */
     /* border: 1px solid yellow; */
@@ -347,16 +411,23 @@ main {
 
 /* BONUS HEADER */
 
-header > a:hover {
+#main header > a:hover {
     font-size: 1.3rem;
-    filter: brightness(1);
     color: white;
-        
+            
 }
 
 #main li, #main .subtitle {
     color: gray;
 }
+
+#main hr {
+    opacity: 0;
+    width: 60%;
+    margin: 0 auto;
+    border: 1px solid yellowgreen;
+}
+
 
 /* BONUS NAV LIST  */
 
@@ -364,6 +435,10 @@ header > a:hover {
     color: white;
 }
 
+#head-nav li:hover hr{
+    display: block;
+    opacity: 1;
+}
 
 #main ul {
     margin: 100px auto;
@@ -372,12 +447,6 @@ header > a:hover {
     /* debug */
     /* border: 1px solid black; */
 } 
-
-#main hr {
-    width: 60%;
-    margin: 0 auto;
-    border: 1px solid yellowgreen;
-}
 
 
 

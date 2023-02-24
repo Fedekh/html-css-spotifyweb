@@ -119,19 +119,19 @@
                         <li>IN EVIDENZA <hr></li>
                     </a>
                     <a href="">
-                    <li>PODCAST</li>
+                    <li>PODCAST <hr></li>
                     </a>
                     <a href="">
-                    <li>CLASSIFICHE</li>
+                    <li>CLASSIFICHE <hr></li>
                     </a>
                     <a href="">
-                        <li>GENERI E MOOD</li>
+                        <li>GENERI E MOOD <hr></li>
                     </a>
                     <a href="">
-                        <li>NUOVE USCITE</li>
+                        <li>NUOVE USCITE <hr></li>
                     </a>
                     <a href="">
-                        <li>SCOPRI</li>
+                        <li>SCOPRI <hr></li>
                     </a>
                 </ul>
                 <!-- /NAVIGATION MENU UNDER HEADER -->
@@ -261,15 +261,26 @@
             </div>
             <div id="play" class="flex-v">
                 <div id="comand-play">
-                    <i class="fa-solid fa-shuffle"></i>
-                    <i class="fa-solid fa-backward-step"></i>
-                    <i class="fa-regular fa-circle-play"></i>
-                    <i class="fa-solid fa-forward-step"></i>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-shuffle"></i>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-backward-step"></i>
+                        </li>
+                        <li>
+                            <i class="fa-regular fa-circle-play plays"></i>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-forward-step"></i>
+                        </li>
+                    </ul>
                 </div>
                 <div id="progress" class="flex-card-bot" > 
                     <h5>0:25</h5>
                     <div class="bar">
                         <div id="progress-bar"></div>
+                        <span class="circle"></span>
                         <div id="under-bar" ></div>
                     </div>
                     <h5>4:35</h5>
@@ -281,6 +292,7 @@
                 <i class="fa-solid fa-volume-high"></i>
                 <div class="bar">
                     <div id="volume"></div>
+                    <span class="circle"></span>
                     <div id="under-volume"></div>
                 </div>
             </div>            
