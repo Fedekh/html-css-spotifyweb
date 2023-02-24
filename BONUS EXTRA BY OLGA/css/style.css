@@ -351,11 +351,49 @@ ul {
 
 /* BONUS SIDE BAR */
 
+#menu, .playlist {
+    position: relative;
+}
 
-#menu li:hover, .playlist li:hover{
-    border-left: 2px solid green;
+#menu li:hover span, #playlist h3:hover{
+    color: white;
     cursor: pointer;
 }
+
+#menu li, .playlist li {
+    border-left: 1px solid transparent;
+    /* debug */
+    /* border-left: 1px solid red; */
+}
+
+
+/* BONUS EXTRA HOVER  */
+
+
+#menu li:hover::before, .playlist li:hover:before {
+    content: "";
+    /* border-left: 1px solid green; */
+    position: absolute;
+    height: 25%;
+    width: 1px;
+    left: -8px;
+    background-color: green;
+}
+
+.playlist li:hover:before {
+    content: "";
+    /* border-left: 1px solid green; */
+    position: absolute;
+    height: 15%;
+    width: 1px;
+    left: -8px;
+    background-color: green;
+}
+
+/* #menu li:hover, .playlist li:hover{
+    border-left: 2px solid green;
+    cursor: pointer;
+} */
 
 #side-bar .playlist li:hover a{
     color: white;
