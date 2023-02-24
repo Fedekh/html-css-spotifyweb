@@ -121,7 +121,10 @@ ul {
     cursor: pointer;
 }
 
-
+#nav-bot #play {
+    margin-left: 10px;
+    /* padding-left: 10px; */
+}
 #currently {
     width: 250px;
 }
@@ -141,6 +144,11 @@ ul {
 #currently i {
     margin: 0 10px;    
 }
+
+#comand-play {
+    margin-right: 50px;
+}
+
 
 #comand-play ul{
     display: flex;
@@ -171,14 +179,14 @@ ul {
 }
 
 #volume {
-    width: 30px;
+    width: 40%;
     height: 3px;
     background-color: white;
     display: inline-block;
 }
 
 #under-volume{
-    width: 50px;
+    width: 60%;
     height: 3px;
     background-color: #5f6572;
     position: relative;
@@ -194,8 +202,8 @@ ul {
     
 }
 
-#progress, #progress:nth-child(2) {
-    max-width: 100%;
+#progress, #progress.bar {
+    width: 100%;
 }
 
 
@@ -205,6 +213,7 @@ ul {
 /* HO VOLUTO USARE STO TRUCCHETTO PER NON ESAURIRMI */
 .bar {
     display: flex;
+    width: 80%;
     
 }
 #progress-bar {
@@ -225,6 +234,8 @@ ul {
 }
 
 /* EXTRA BONUS HOVER WITH AFTER PSEUDOELEMENT */
+
+
 
 #progress .bar:hover #progress-bar:after{
     content: "";
@@ -247,13 +258,13 @@ ul {
     border-radius: 50%;
     background-color: green;
     position: absolute;
-    right: 68px;    
+    right: 87px;    
     bottom: -1px;
     z-index: 1;
 }
 
 #progress .bar:hover #under-bar{
-    width: 197px;
+    /* width: calc(80% - 5px); */
 }
 
 
@@ -282,7 +293,7 @@ ul {
 
 .bar:hover #progress-bar {
     background-color: green;
-    width: 66px;
+    
 }
 
 #comand .bar:hover #volume{
