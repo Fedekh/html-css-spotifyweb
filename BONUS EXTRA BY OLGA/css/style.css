@@ -1,3 +1,11 @@
+/* BONUS EXTRA: 
+- FAR SI CHE LA SIDE BAR, AL DIMINUIRE DI HEIGHT DI TUTTO IL BODY, SI ADATTI SENZA FAR 
+  SCOMPARIRE GLI ITEM, ALL'OCCORRENZA CHE COMPAIA SCROLL BAR Y
+
+- CERCARE DI USARE PSEUDOCLASSE PER FAR COMPARIRE I BONUS DELLA LINEE VERDI SIA NELLA SIDE
+   BAR CHE NELLA NAV BAR SOTTO HEADER */
+
+   
 /* RESET */
 
 * {
@@ -21,7 +29,7 @@ img {
 
 a {
     text-decoration: none;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 :root{
@@ -273,17 +281,18 @@ ul {
 }
 
 #side-bar > * {
-    /* padding: 0 10px; */
     color: gray;
+    
     /* debug */
     /* border: 1px solid red; */
 }
 
-#side-bar li, #side-bar div {
-    padding-left: 5px;
+#side-bar li a {
+    color: gray;
 }
 
-#side-bar a {
+
+#side-bar a, #{
     color: grey;
 }
 
@@ -292,12 +301,16 @@ ul {
     vertical-align: middle;
 }
 
-
+#side-bar .nav-top, #menu, #install {
+    width: 90%;
+    margin: 0 auto;
+}
 
 #install > a {
     display: flex;
     gap: 10px;
     align-items: center;
+    color: gray;
 }
 
 #install div{
@@ -417,7 +430,7 @@ main {
             
 }
 
-#main li, #main .subtitle {
+#main li a, #main .subtitle {
     color: gray;
 }
 
@@ -431,14 +444,26 @@ main {
 
 /* BONUS NAV LIST  */
 
-#head-nav li:hover{
+#head-nav li a {
+    position: relative;
+}
+
+#head-nav li a:hover::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -5px;
+  background-color: green;
+  
+}
+
+
+#head-nav li:hover a{
     color: white;
 }
 
-#head-nav li:hover hr{
-    display: block;
-    opacity: 1;
-}
+
 
 #main ul {
     margin: 100px auto;
@@ -458,6 +483,7 @@ main {
     cursor: pointer;  /*for to appear hand in card*/
     width: calc(100% / 6 - 10px);
     position: relative;
+
     /* debug */
     /* border: 1px solid red; */
 }
